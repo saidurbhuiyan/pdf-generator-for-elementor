@@ -1,0 +1,22 @@
+{
+    "name": "saidur/pdf-generator-for-elementor",
+    "description": "Generates a PDF from Elementor Pro form submissions and attaches it to the email.",
+    "type": "elementor-pro-plugin",
+    "license": "GPL2",
+    "authors": [
+        {
+            "name": "Saidur Bhuiyan",
+            "email": "saidurbhuiyan.dev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4",
+        "mpdf/mpdf": "v8.2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ElementorPro\\PDFGenerator\\": "includes/"
+        }
+    }
+}
