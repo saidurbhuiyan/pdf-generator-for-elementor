@@ -209,7 +209,12 @@ class PDFGenerator {
     public static function get_current_template($key): mixed
     {
         $templates = get_option( 'pdf_generator_templates', [] );
-        return array_filter($templates, static fn($template) => $template['name'] === $key || $template['id'] === (int)$key)[0] ?? [];
+        foreach ($templates as $template) {
+            if ($template['name'] === $key || $template['id'] === (int)$key) {
+                return $template;
+            }
+        }
+        return [];
 
 
     }
